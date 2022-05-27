@@ -3,9 +3,14 @@ import { createGlobalStyle } from 'styled-components'
 export const GlobalStyle = createGlobalStyle`
 
   :root {
-    --background: #F8F9F9;
+    --background: #181818;
+    --color-text: #fff;
     --light-orange: #FABF1B;
     --dark-orange: #FD880F;
+    --gray: #4D5656;
+    --red: #CB4335;
+    --green: #28B463;
+    --blue-dark: #147B80;
   }
 
   * {
@@ -30,9 +35,18 @@ export const GlobalStyle = createGlobalStyle`
     height: 100%;
   }
 
-  body, button, input, textarea {
+  body, button, input, textarea, a {
     font-family: 'Poppins', sans-serif;
     font-weight: 400;
+    color: var(--color-text);
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  li {
+    list-style: none;
   }
 
   .container {
@@ -46,5 +60,15 @@ export const GlobalStyle = createGlobalStyle`
     main {
       flex-grow: 1;
     }
+
+    .deposits {
+      color: var(--green)
+    }
+
+    .withdraws {
+      color: var(--red);
+    }
   }
+
+  
 `
